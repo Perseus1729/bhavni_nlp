@@ -1,0 +1,13 @@
+NAME Sandhya, REF BY: DR.DUMMY DUMMY, SAMPLE REPORT
+Sample ID | MMG20200057563 Sample Type | Oropharyngeal/Nasopharyngeal_
+| Gender | Male Sample Collected On Oct 30, 2020 : 10;00
+| Age / DOB 3 | Report Date Oct 30, 2020 : 23:17
+| Aadhar Number 1234 5678 9101 Mobile Number 123456789
+Referred By Hospital
+| Passport Number 123456 ‘Nationality Nie
+RT-PCR test for COVID-19 (NOVEL CORONA VIRUS)
+
+Result
+
+| Investigation CT Value Result |
+SARS-CoV-2 virus detection (N Gene) Undetermined y  (Positive)
