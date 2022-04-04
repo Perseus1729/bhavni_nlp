@@ -21,5 +21,7 @@ virtualenv -p ~/.pyenv/versions/3.8.0/bin/python ./new_env,
                          pip install pymupdf
                          <br>
                          python -m spacy download en_core_web_md
+                         <br>
+                         pip install spacy-langdetect
 <br>
 5.cd to the files folder and Run "python extract_names.py" 
