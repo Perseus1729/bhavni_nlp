@@ -30,6 +30,8 @@ print("--------------------------------------")
 # | Investigation CT Value Result |
 # SARS-CoV-2 virus detection (N Gene) Undetermined y  (Positive)
 # """
+keys = []
+values = []
 with open('input.txt', 'r') as file:
     text = file.read().replace('\n', '')
 type_ids_filter = ['T033']
@@ -38,18 +40,21 @@ for type_ids in type_ids_filter:
   cui_filters.update(cat.cdb.addl_info['type_id2cuis'][type_ids])
 cat.cdb.config.linking['filters']['cuis'] = cui_filters
 doc=cat(text)
+idx=0
 for ent in doc.ents:
+    if str(ent)!="detection":
+        keys.append('Covid-Result')
+        values.append(str(ent))
     print(ent)
 doc2 = cat(text)
 #print(f"The size of the cdb is now: {len(cui_filters)}")
 print("--------------------------------------")
-keys = []
-values = []
+
 nlp = spacy.load('en_core_web_md')
-temp_data = {
-    "DATE": ["Jan 10, 1197", "Mar 24, 1020", "Jun 17, 29"],
-    "PERSON": ["Hitesh", "Janie", "Suresh","Mike","Harvey"]
-}
+# temp_data = {
+#     "DATE": ["Jan 10, 1197", "Mar 24, 1020", "Jun 17, 29"],
+#     "PERSON": ["Hitesh", "Janie", "Suresh","Mike","Harvey"]
+# }
 
 # nlp.add_pipe("concise_concepts", config={"data":temp_data,"ent_score": True})
 text1= nlp(text)
@@ -142,7 +147,6 @@ print("--------------------------------------")
 
 # # Construction from class
 # spancat = nlp.add_pipe("spancat")
-# doc = n
 # scores = spancat.predict(text1)
 # spancat.set_annotations(text1, scores)
 # print(scores)
