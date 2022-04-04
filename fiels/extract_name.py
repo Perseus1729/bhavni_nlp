@@ -4,7 +4,7 @@ from collections import defaultdict
 import re
 import json 
 # Download the model_pack from the models section in the github repo.
-DATA_DIR = "./data/"
+DATA_DIR = "../data/"
 model_pack_path = DATA_DIR + "medmen_wstatus_2021_oct.zip"
 cat = CAT.load_model_pack(model_pack_path)
 print("--------------------------------------")
@@ -43,21 +43,29 @@ for w in text1.ents:
         keys.append('DATE')
         values.append(w.text)
         print(w.text)
+        break
 print("--------------------------------------")
-text2 = nlp(text.lower())
+text2 = nlp(text)
 for w in text2.ents:
   if w.label_=='PERSON':
     keys.append('PERSON')
     values.append(w.text)
     print(w.text)
+    break
 print("--------------------------------------")
-beams = nlp.entity.beam_parse([ text1 ], beam_width = 16, beam_density = 0.001)
-entity_scores = defaultdict(float)
-for beam in beams:
-  for score, ents in nlp.entity.moves.get_beam_parses(beam):
-      for start, end, label in ents:
-        entity_scores[(start, label)] += score
-print("--------------------------------------")
+# beams = nlp.entity.beam_parse([ text1 ], beam_width = 16, beam_density = 0.001)
+# entity_scores = defaultdict(float)
+# for beam in beams:
+#   for score, ents in nlp.entity.moves.get_beam_parses(beam):
+#       for start, end, label in ents:
+#         entity_scores[(start, label)] += score
+# threshold = 0.2
+# for key in entity_scores:
+#   start, label = key
+#   score = entity_scores[key]
+#   if score > threshold:
+#       print ('Label: {}, text:{}, Confidencelevel: {}'.format(label, text1[start: start+1], score))
+# print("--------------------------------------")
 def patientID(text):
   ID_REG = re.compile(r'[a-zA-Z0-9\.\-+_]{14}')
   IDs = re.findall(ID_REG,text)
