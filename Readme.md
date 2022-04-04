@@ -10,4 +10,4 @@
                          pip install spacy[transformers]
                          python -m spacy download en_core_web_md
 <br>
-5.
+5.cd to the files folder and Run "python extract_names.py" 
