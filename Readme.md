@@ -2,9 +2,13 @@
 <br>
 (
 <br>
-virtualenv -p ~/.pyenv/versions/3.8.0/bin/python ./new_env,
+Step-1: Install virtualenv, and pyenv
 <br>
- . ./new_env/bin/activate
+Step-2: download python version 3.8.0 using pyenv
+<br>
+Step-3:virtualenv -p ~/.pyenv/versions/3.8.0/bin/python ./new_env,
+<br>
+ Step-4:. ./new_env/bin/activate
  <br>
  )
 <br>
