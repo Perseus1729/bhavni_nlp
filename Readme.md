@@ -1,5 +1,13 @@
 1.Create a virtual enviroment with python version 3.8
 <br>
+(
+<br>
+virtualenv -p ~/.pyenv/versions/3.8.0/bin/python ./new_env,
+<br>
+ . ./new_env/bin/activate
+ <br>
+ )
+<br>
 2.Install Medcat using :- pip install medcat==1.2.7
 <br>
 3.Install the Medcat model using :- 
