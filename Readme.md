@@ -2,6 +2,7 @@
 ***
 1. Create a virtual enviroment with python version 3.8
 <br>
+'''
 (
 <br>
  * Step-1: Install virtualenv, and pyenv
@@ -13,6 +14,7 @@
  * Step-4:. ./new_env/bin/activate
  <br>
  )
+ '''
 <br>
 2. Install Medcat using :- pip install medcat==1.2.7
 <br>
