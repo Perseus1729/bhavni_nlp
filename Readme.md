@@ -1,14 +1,16 @@
+#Running the Feature Extracter code
+***
 1.Create a virtual enviroment with python version 3.8
 <br>
 (
 <br>
-Step-1: Install virtualenv, and pyenv
+ *Step-1: Install virtualenv, and pyenv
 <br>
-Step-2: download python version 3.8.0 using pyenv
+ *Step-2: download python version 3.8.0 using pyenv
 <br>
-Step-3:virtualenv -p ~/.pyenv/versions/3.8.0/bin/python ./new_env,
+ *Step-3:virtualenv -p ~/.pyenv/versions/3.8.0/bin/python ./new_env,
 <br>
- Step-4:. ./new_env/bin/activate
+  *Step-4:. ./new_env/bin/activate
  <br>
  )
 <br>
