@@ -14,3 +14,6 @@
  * python -m spacy download en_core_web_md
  * pip install spacy-langdetect
 5. cd to the files folder and Run "python extract_names.py" 
+## Testing Multiple reports
+Add multiple input files and the actual output files into the files folder.
+Running the script " python test.py ", will run the program on multiple input files and checks wether the input and the output files match
